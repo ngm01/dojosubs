@@ -21,7 +21,7 @@ public class DojoPackage {
 	private String name;
 	
 	private float cost;
-	private boolean available;
+	private boolean available = true;
 	
 	private Date createdAt;
 	private Date updatedAt;
@@ -79,7 +79,7 @@ public class DojoPackage {
 	@PrePersist
     protected void onCreate(){
     this.setCreatedAt(new Date());
-    //this.available = true;
+    this.setAvailable(true);
     }
 
     @PreUpdate
